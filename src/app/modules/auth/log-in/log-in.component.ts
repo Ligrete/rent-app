@@ -42,7 +42,7 @@ export class LogInComponent implements OnInit {
     console.log('click login');
     
     const logInData: LogInModel = {
-      login: this.emailFormControl.value,
+      email: this.emailFormControl.value,
       password: this.passwordFormControl.value
     }
     this.authService.logIn(logInData).subscribe((resp) => {

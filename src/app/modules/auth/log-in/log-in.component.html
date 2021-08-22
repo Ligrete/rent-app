@@ -25,13 +25,10 @@
     </mat-form-field>
   </form>
   <div class="buttons">
-    <button mat-stroked-button color="primary"
-    (click)="logIn()"
+    <button mat-stroked-button color="primary" (click)="logIn()"
       [disabled]="!passwordFormControl.hasError('required') && emailFormControl.hasError('email') && !emailFormControl.hasError('required')">Войти</button>
-      <span> или </span>
-    <button mat-stroked-button
-      [routerLink]="['/sign-up']"
-        >Регистрироваться</button>
+    <span> или </span>
+    <button mat-stroked-button routerLink="/auth/sign-up">Регистрироваться</button>
   </div>
 
 </div>
