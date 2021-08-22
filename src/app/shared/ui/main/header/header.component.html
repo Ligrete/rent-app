@@ -4,9 +4,14 @@
   </button>
   <span routerLink="/"> {{ name }} </span>
   <span class="example-spacer"></span>
-  <button mat-stroked-button class="example-icon favorite-icon" routerLink="/auth">
-    Войти
-  </button>
+
+
+  <ng-container *ngIf="(urlObserver$ | async) !== 'auth'">
+    <button mat-stroked-button class="example-icon favorite-icon" routerLink="/auth">
+      Войти
+    </button>
+  </ng-container>
+  
   <!-- <button mat-stroked-button color="warn" class="example-icon" aria-label="Example icon-button with share icon">
     Sign Up
   </button> -->
